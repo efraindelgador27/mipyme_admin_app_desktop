@@ -1,0 +1,107 @@
+.hidened{
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 1rem;
+    width: 1.5in;
+    height: 0.5in;
+    margin-top: 1rem;
+    color: transparent;
+    transition: 0.7s;
+}
+.hidened::after{
+    font-family: 'Dancing Script', cursive;
+    content: "Editar";
+}
+.hidened:hover{
+    transition: 0.7s;
+    font-size: 1.5rem;
+    color: white;
+    border: 0.2rem solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.modalContainer{
+    width: 5in;
+    height: 3in;       
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;     
+    box-shadow: 3px 3px 15px rgb(36, 36, 36);
+    background-color: rgba(255, 255, 255, 0.027);      
+    transform: rotateY(90deg);
+    transform:translateX(-1050px);
+    opacity: 0;
+    transition: 1s;
+}
+.noDisplay{
+    display: none;
+}
+.desplegarModal{
+    transform:translateX(0px);    
+    animation-name: fromTop;
+    height: 3in;    
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+.modalNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalNav button{
+    background-color: black;
+    width: 2in;
+    height: 0.4in;
+    padding: 0.1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 2px white;
+    color: white;
+    font-weight: 900;
+    transition: 0.5s;
+}
+.modalNav button:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 5px white;
+}
+.formModal{  
+    height: 100%;
+    display: grid;
+    flex-direction: row;    
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.formModal input{
+    width: 4.5in;
+    height: 0.5in;    
+    padding-left: 1rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.formModal input:focus{
+    transition: 0.5s;
+    box-shadow: 0 0 15px rgb(255, 209, 2);
+    outline: none;
+}
+
+@keyframes fromTop{
+    0%{
+        opacity: 0;
+       transform: translateX(-1050px); 
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);    
+    }
+}

@@ -1,0 +1,175 @@
+.warning{
+    padding-left: 3rem;
+    font-size: 1.5rem;
+    color: black;
+    text-shadow: 0 0 10px red;
+    animation-name: titilar;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes titilar{
+    0%{
+        text-shadow: 0 0 10px red;
+    }
+    50%{
+        text-shadow: 0 0 20px red;
+        color: red;
+    }
+    100%{
+        text-shadow: 0 0 10px red;
+    }
+}
+.panel{
+    width: 100vw;
+    height: 40rem;
+    background-color: black;    
+    color: antiquewhite;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 5% 65%;         
+    align-items: center;
+}
+
+.formPanel{            
+    display: grid;
+    grid-template-columns: 31% 31%  31%; 
+    grid-template-columns: 100%;
+    
+}
+
+.formPanel .formItem label {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;   
+    transition: 0.5s;
+}
+
+.selected{
+    transition: 0.5s;
+    text-shadow: 0 0 7px rgb(0, 255, 255);    
+}
+.formItem{            
+    border-bottom: 3px solid rgba(255, 255, 255, 0.363);
+    height: 2rem;
+    transition: 0.5s;
+}
+
+.formItem:hover{    
+    border-left: 0.3rem solid rgba(255, 255, 255, 0.363);
+    padding-left: 0.5rem;
+    transition: 0.5s;
+}
+
+.formItem label input{
+    
+    display: none;
+}
+
+.btnPanel{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 95vw;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    width: 15%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    transition: 0.5s;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.btn:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 10px white;
+    text-shadow: 0 0 10px white;
+}
+
+
+@media (max-width:500px){
+    .panel{
+        padding-top: 5rem;
+        width: 100vw;    
+        height: 1000px;    
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 90%;
+    }
+    
+   
+    .formPanel{        
+        position: absolute;
+        display: grid;
+        grid-template-columns: 100%; 
+       
+    }
+    .btnPanel{                      
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .btn{
+        margin: 0.5rem;
+        width: 80%;
+        padding-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:900px) {
+    .formPanel{      
+        padding-left: 3rem;  
+        display: grid;
+        grid-template-columns: 31% 31%  31%; 
+        
+    }
+    .btnPanel{               
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (min-width:500px) and (max-width:900px) {
+    .formPanel{    
+        padding-left: 3rem;     
+        display: grid;
+        grid-template-columns: 31% 31%  31%; 
+        
+    }
+    .btnPanel{                  
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .btn{
+        width: 20%;
+        padding-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+}
+
+.form{
+    width:100%;
+    height:20rem;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows:  100%;
+}
+
+.navegate {
+    height: 100%;
+    width: 100%;    
+    background-color: rgba(0, 0, 0, 0.527);
+    color:white;
+    border:none;
+   }

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'EB Garamond', serif;
+*/
+:root {
+    --RedPahntom  : rgba(255, 1, 1, 0.438);
+    --whitePahntom: rgba(255, 255, 255, 0.438);
+}
+
+* {
+    padding        : 0;
+    margin         : 0;
+    list-style: none;
+    text-decoration: none;
+}
+li{
+    color:aliceblue
+}
+body {
+    /*  background-image: url("../base.jpg");    */
+    background-color : black;
+    background-repeat: repeat-y;
+    background-size  : auto;
+    display          : flex;
+    flex-direction   : column;
+    justify-content  : center;
+    align-items      : center;
+}
+
+.pagina {
+    background-image : url("../base.jpg");
+    background-repeat: no-repeat;
+    background-size  : cover;
+    background-color : rgb(0, 0, 0);
+    margin-bottom    : 5px;
+    ;
+}
+
+.card {   
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.281);
+}
+
+
+.title {
+    color: rgb(255, 228, 154)
+}
+
+.subtitle {
+    color: rgb(255, 215, 162)
+}
+
+.title,
+.subtitle {
+    font-family: 'Dancing Script', cursive;
+
+}
+
+p.description {
+    font-size          : 1rem;
+    line-height: 1.5rem;
+    color              : rgb(255, 215, 162);
+    font-family        : 'EB Garamond', serif,cursive;
+}
+
+
+@media (max-width:500px) {
+    .card {
+        height               : 600px;
+        width                : 95vw;
+        margin-bottom        : 30px;
+        padding-left         : 2rem;
+        padding-left         : 1rem;
+        flex-direction       : grid;
+        grid-template-columns: 100%;
+        grid-template-rows   : 50% 50%;
+        border-radius        : 15px;
+        border-bottom        : 5px solid var(--whitePahntom);
+    }
+
+    .imgCad {
+        border: 5px solid transparent;
+        width : 22rem;
+        height: 20rem;
+        ;
+    }
+
+    .bodyCard {
+
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        color    : rgb(255, 228, 154)
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        color    : rgb(255, 215, 162)
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:900px) {
+
+    .pagina {
+        width          : 8.5in;
+        height         : 11in;
+        display        : flex;
+        flex-direction : row;
+        align-items    : flex-start;
+        justify-content: space-between;
+        flex-wrap      : wrap;
+        padding        : 5mm;
+        gap            : 25mm 0;
+    }
+
+    .card {
+        width                : 2, 7in;
+        height               : 5in;
+        display              : grid;
+        grid-template-columns: 100%;
+        grid-template-rows   : 100%;
+        align-items          : center;
+    }
+
+    .imgCad {
+        z-index      : 2;
+        width        : 4in;
+        height       : 95%;
+        background   : linear-gradient(to right, rgb(0, 0, 0), rgb(121, 89, 71)) border-box;
+        border-radius: 20px;
+        border       : 10px solid transparent;
+
+    }
+
+    .bodyCard {
+        position        : absolute;
+        padding-left: 2rem;
+        z-index         : 3;
+        width           : 15%;
+        height          : 4.8in;
+        margin-left     : 0.8rem;
+        border-radius   : 20px 0 0 20px;
+        text-align      : center;
+        background-color: rgba(0, 0, 0, 0.26);
+        list-style:georgian;
+    }
+
+    .title {
+        margin-top: 1rem;
+        font-size : 2rem;
+        color     : rgb(255, 228, 154);
+        text-shadow: 0 2px 5px rgb(0, 0, 0);       
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+        color    : rgb(255, 215, 162);
+        margin-top: 0.5rem;
+    }
+
+    .description {
+        margin-top : 1rem;
+        font-size  : 0.9rem;
+        color      : rgb(253, 202, 136);
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 0 2px 5px rgb(0, 0, 0);  
+    }
+}
+
+@media (min-width:500px) and (max-width:900px) {
+    .card {
+        height               : 400px;
+        width                : 100vw;
+        margin-bottom        : 30px;
+        padding              : 0.5rem;
+        display              : grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows   : 100%;
+        text-shadow          : 0 0 10px black;
+        border-radius        : 15px;
+        border-bottom        : 5px solid var(--whitePahntom);
+    }
+
+    .imgCad {
+        width        : 22rem;
+        height       : 20rem;
+        margin       : 1rem 0 0.5rem 0;
+        background   : linear-gradient(to right, rgb(155, 101, 0), rgb(250, 222, 67)) border-box;
+        border-radius: 20px;
+        border       : 5px solid transparent;
+    }
+
+    .bodyCard {
+        padding   : 0.5rem .05rem;
+        width     : 90%;
+        height    : 100%;
+        text-align: center;
+
+    }
+}
