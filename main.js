@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path=require('path');
-const {User}= require('./db/dbEmulatortor');
+const {User}= require('./db/dbEmulator');
 const createWindow = () => {
     const win = new BrowserWindow({
       width: 800,
@@ -15,7 +15,7 @@ const createWindow = () => {
   
   app.whenReady().then(
     ()=>{      
-        ipcMain.handle('pink', () => new User(););
+        ipcMain.handle('pink', () => new User());
         createWindow();
         app.on('activate', () => {
           if (BrowserWindow.getAllWindows().length === 0) {

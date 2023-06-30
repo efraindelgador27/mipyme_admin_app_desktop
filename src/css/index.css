@@ -31,7 +31,7 @@ body {
 }
 
 .pagina {
-    background-image : url("../base.jpg");
+    background-image : url("../../base.jpg");
     background-repeat: no-repeat;
     background-size  : cover;
     background-color : rgb(0, 0, 0);

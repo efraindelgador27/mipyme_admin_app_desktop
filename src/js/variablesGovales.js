@@ -393,7 +393,7 @@ const data={
 }
 
 const catalogo = document.getElementById("catalogo");
-const rootPath = '../../static/img';
+const rootPath = './static/img';
 
 //handlerPanel:
 const correntPanel = document.getElementById("correntPanel");
