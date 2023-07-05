@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./storage/delicioso_test.db?connection_limit=5&pool_timeout=5"
+}
+
+model Maker {
+  id    Int     @id @default(autoincrement())
+  name String 
+  items Item[]
+}
+
+model Stock{
+  id    Int     @id @default(autoincrement())
+  name String 
+  min_level Int @default(0)
+  total Int @default(0)  
+  rotation Rotation[]
+}
+
+model Item {
+  id Int     @id @default(autoincrement())
+  type String  @unique
+  cost Int?
+  ingredient String 
+  maker Maker @relation(fields: [marker_id],references: [id])
+  marker_id Int 
+  rotation Rotation[]
+  supplier Supplier[]
+}
+
+model Supplier {
+  id        Int     @id @default(autoincrement())
+  name    String
+  address   String
+  phone  String
+  item Item[]
+}
+
+model Order{
+  id Int @id @default(autoincrement())
+  type String 
+  date DateTime 
+  rotation Rotation[]
+}
+model Rotation{
+  id Int @id @default(autoincrement())
+  quentity Int @default(0)
+  type  String @default("egreso")
+  reason String @default("venta")
+  order Order @relation( fields: [orders_id],  references: [id])
+  stock Stock @relation(fields: [stock_id],  references: [id])
+  item Item @relation(fields: [item_id],  references: [id])
+  detail String
+  item_id Int
+  stock_id Int
+  orders_id Int  
+}
