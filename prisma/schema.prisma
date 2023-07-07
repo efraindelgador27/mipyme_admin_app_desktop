@@ -26,13 +26,24 @@ model Stock{
 
 model Item {
   id Int     @id @default(autoincrement())
-  type String  @unique
+  type String 
+  name String 
   cost Int?
-  ingredient String 
+  ingredient String? 
   maker Maker @relation(fields: [marker_id],references: [id])
   marker_id Int 
   rotation Rotation[]
-  supplier Supplier[]
+  //supplier Supplier[]
+  itemToSupplier ItemToSupplier[]
+}
+
+model ItemToSupplier{
+  id Int     @id @default(autoincrement())
+  cost Int
+  item_id Int 
+  supplier_id Int 
+  item Item @relation(fields: [item_id],references: [id])
+  supplier Supplier @relation(fields: [supplier_id],references: [id],onDelete: Cascade)
 }
 
 model Supplier {
@@ -40,8 +51,10 @@ model Supplier {
   name    String
   address   String
   phone  String
-  item Item[]
+   itemToSupplier ItemToSupplier[]
+  //item Item[]
 }
+
 
 model Order{
   id Int @id @default(autoincrement())

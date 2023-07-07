@@ -8,7 +8,10 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "test_db": "node ./db/test/index.js"
+    "item": "node ./db/test/index.js item",
+    "maker": "node ./db/test/index.js maker",
+    "supplier": "node ./db/test/index.js supplier",
+    "conection": "node ./db/test/index.js conection"
   },
   "author": "Efrain",
   "license": "ISC",
